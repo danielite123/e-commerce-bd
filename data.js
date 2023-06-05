@@ -1,8 +1,24 @@
+import bcrypt from "bcryptjs";
 const data = {
+  users: [
+    {
+      name: "Daniel",
+      email: "danielite@gmail.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: true,
+    },
+    {
+      name: "Victor",
+      email: "danielite200@gmail.com",
+      password: bcrypt.hashSync("12345678"),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      name: "Nike Canvas",
-      slug: "Nike-Canvas",
+      // _id: "1",
+      name: "Shirt no 1",
+      slug: "Shirt-no-1",
       category: "shirt",
       image: "/images/p1.jpg",
       price: 120,
@@ -13,21 +29,23 @@ const data = {
       description: "high quality shoe",
     },
     {
-      name: "Shoe no 2",
-      slug: "Shoe-no-2",
+      // _id: "2",
+      name: "Shirt no 2",
+      slug: "Shoe no 2",
       category: "shirt",
       image: "/images/p2.jpg",
       price: 3000,
-      countInStock: 0,
+      countInStock: 20,
       brand: "Addidas",
       rating: 2.5,
       numReviews: 70,
       description: "high quality shoe",
     },
     {
-      name: "Nike Canvas",
-      slug: "Nike-Canvas",
-      category: "shirt",
+      // _id: "3",
+      name: "Trouser no 1",
+      slug: "Trouser-no-1",
+      category: "trouser",
       image: "/images/p3.jpg",
       price: 120,
       countInStock: 10,
@@ -37,8 +55,9 @@ const data = {
       description: "high quality shoe",
     },
     {
-      name: "Shoe no 2",
-      slug: "Shoe-no-2",
+      // _id: "4",
+      name: "Trouser no 2",
+      slug: "Trouser-no-2",
       category: "shirt",
       image: "/images/p4.jpg",
       price: 3000,
